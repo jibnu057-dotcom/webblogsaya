@@ -1,0 +1,177 @@
+/* Pengaturan Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Bagian Header & Navigasi */
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 1.5rem 0;
+    border-bottom: 4px solid #3498db;
+}
+
+header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #3498db;
+}
+
+/* Tata Letak Utama (Grid / Flexbox) */
+.main-content {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    min-height: 60vh;
+}
+
+main {
+    flex: 3;
+}
+
+/* Desain Artikel Blog */
+.post {
+    background: #fff;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.post h2 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.post .date {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.read-more:hover {
+    background: #2980b9;
+}
+
+/* =========================================
+   KODE UNTUK GALERI 3 FOTO (BARU)
+   ========================================= */
+.gallery-tiga-foto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membagi jadi 3 kolom sama rata */
+    gap: 1rem; /* Jarak antar foto */
+    margin: 1.5rem 0;
+}
+
+.gallery-tiga-foto img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Memaksa foto menjadi kotak persegi yang rapi */
+    object-fit: cover; /* Mencegah foto terlihat gepeng jika ditarik */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    height: fit-content;
+}
+
+.sidebar h3 {
+    color: #2c3e50;
+    border-bottom: 2px solid #f4f4f9;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.category-list {
+    list-style: none;
+}
+
+.category-list li {
+    margin-bottom: 0.5rem;
+}
+
+.category-list a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.category-list a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #2c3e50;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* Responsif untuk Layar HP */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    header .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    header nav ul {
+        justify-content: center;
+    }
+    /* Susun galeri foto menjadi ke bawah (1 kolom) jika dibuka di HP agar tidak kekecilan */
+    .gallery-tiga-foto {
+        grid-template-columns: 1fr;
+    }
+}
