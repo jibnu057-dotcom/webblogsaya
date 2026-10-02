@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Saya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Area Header dengan Foto Anda -->
+    <header class="hero-image">
+        <div class="hero-overlay">
+            <div class="container">
+                <h1>KONTAK SAYA</h1>
+                <p>Mari Berdiskusi dan Berkolaborasi</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container main-content" style="justify-content: center;">
+        <main style="flex: 1; max-width: 800px; margin: auto;">
+            <article class="post animasi-scroll">
+                <h2>Hubungi Saya</h2>
+                <p>Terima kasih sudah membaca profil saya! Jika Anda ingin berdiskusi, mengajak mendaki bareng, atau sekadar menyapa, silakan hubungi kontak di bawah ini:</p>
+                
+                <!-- Kotak Info Kontak (Desain Kaca Gelap) -->
+                <div style="background: rgba(0,0,0,0.4); padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem; border-left: 5px solid #27ae60;">
+                    
+                    <h3 style="color: #ffffff; margin-bottom: 0.5rem; border: none;">📱 WhatsApp / Telepon</h3>
+                    <!-- Ubah angka 62812... dengan nomor Anda. Ubah juga angka 0812... yang akan tampil di layar -->
+                    <p style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">
+                        <a href="https://wa.me/6281234567890" target="_blank" style="color: #2ecc71; text-decoration: none;">0859-7412-8222</a>
+                    </p>
+                    
+                    <h3 style="color: #ffffff; margin-bottom: 0.5rem; border: none;">✉️ Email</h3>
+                    <!-- Ubah email di bawah ini -->
+                    <p style="color: #e0e0e0; margin-bottom: 1.5rem;">jibnu057@gmail.com</p>
+
+                    <h3 style="color: #ffffff; margin-bottom: 0.5rem; border: none;">📷 Instagram</h3>
+                    <!-- Ubah username IG di bawah ini -->
+                    <p style="color: #e0e0e0;">@_ibnuujmill</p>
+                </div>
+
+                <!-- Tombol Kembali ke Halaman Utama -->
+                <div style="margin-top: 2rem;">
+                    <a href="index.html" class="read-more" style="background-color: #3498db;">⬅ Kembali ke Beranda</a>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <!-- Script Animasi Scroll (Sama seperti di beranda) -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('muncul');
+                }
+            });
+        });
+        const elemenAnimasi = document.querySelectorAll('.animasi-scroll');
+        elemenAnimasi.forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
